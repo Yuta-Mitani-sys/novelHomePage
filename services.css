@@ -1,0 +1,70 @@
+
+@media screen and (min-width: 960px) {
+  .servicesMain {
+  padding: 50px;
+  }
+}
+
+h3:before
+{
+  content: "‥";
+  padding-right : 5px;/*文字との隙間*/
+  color: #3399FF;/*アイコンの色*/
+}
+
+h3:after
+{
+  content: "‥";
+  padding-left : 5px;/*文字との隙間*/
+  color: #3399FF;/*アイコンの色*/
+}
+
+.servicesContents {
+  padding-top: 100px;
+  margin: 30px;
+}
+
+.servicesTitle {
+  font-size: 40px;
+}
+
+.servicesContainer {
+  width: 100%;
+  height: 100%;
+}
+
+.containerTitle {
+  padding-top: 50px;
+  font-size: 20px;
+}
+
+.containerImg {
+  margin: auto;
+  width: 100%;
+  height: 250px;
+  margin-top: 30px;
+  background-image: url("img/taiyoukouImg.jpeg");
+  background-size: cover;
+}
+
+.containerImg2 {
+  margin: auto;
+  width: 100%;
+  height: 250px;
+  margin-top: 30px;
+  background-image: url("img/zyosou.jpeg");
+  background-size: cover;
+}
+
+.containerImg3 {
+  margin: auto;
+  width: 100%;
+  height: 250px;
+  margin-top: 30px;
+  background-image: url("img/senzai.jpeg");
+  background-size: cover;
+}
+
+.containerText {
+  margin-top: 20px;
+}

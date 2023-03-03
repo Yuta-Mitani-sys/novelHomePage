@@ -1,0 +1,202 @@
+
+@media screen and (min-width: 960px) {
+  .servicesMain {
+  padding: 50px;
+  }
+}
+
+.servicesContents {
+  padding-top: 100px;
+  margin: 30px;
+}
+
+.servicesTitle {
+  font-size: 40px;
+}
+
+.servicesContainer {
+  width: 100%;
+  height: 100%;
+}
+
+.containerTitle {
+  padding-top: 50px;
+  font-size: 20px;
+}
+
+.containerText {
+  margin-top: 20px;
+}
+
+/* @media screen and (min-width: 960px) {
+  .containerText {
+    margin-right: 35%;
+    }
+} */
+
+
+@media screen and (min-width: 541px) {
+  .serviceDetail {
+     display: flex;
+     height: 100%;
+     width: 100%;
+    }
+}
+
+.containerImg {
+  margin: auto;
+  width: 100%;
+  height: 500px;
+  margin-top: 30px;
+  background-image: url("img/items/item1.jpeg");
+  background-size: cover;
+}
+
+@media screen and (min-width: 541px) {
+  .containerImg {
+    width: 300px;
+    height: 400px;
+    margin-right: 30px;
+    }
+}
+
+@media screen and (min-width: 960px) {
+  .containerImg {
+    width: 250px;
+    height: 350px;
+    margin-right: 60px;
+    }
+}
+
+.containerImg2 {
+  margin: auto;
+  width: 100%;
+  height: 500px;
+  margin-top: 30px;
+  background-image: url("img/items/item2.jpeg");
+  background-size: cover;
+}
+
+@media screen and (min-width: 541px) {
+  .containerImg2 {
+    width: 300px;
+    height: 400px;
+    margin-right: 30px;
+    }
+}
+
+@media screen and (min-width: 960px) {
+  .containerImg2 {
+    width: 250px;
+    height: 350px;
+    margin-right: 60px;
+    }
+}
+
+.containerImg3 {
+  margin: auto;
+  width: 100%;
+  height: 500px;
+  margin-top: 30px;
+  background-image: url("img/items/item3.jpeg");
+  background-size: cover;
+}
+
+@media screen and (min-width: 541px) {
+  .containerImg3 {
+    width: 300px;
+    height: 400px;
+    margin-right: 30px;
+    }
+}
+
+@media screen and (min-width: 960px) {
+  .containerImg3 {
+    width: 250px;
+    height: 350px;
+    margin-right: 60px;
+    }
+}
+
+.containerImg4 {
+  margin: auto;
+  width: 100%;
+  height: 500px;
+  margin-top: 30px;
+  background-image: url("img/items/item4.jpeg");
+  background-size: cover;
+}
+
+@media screen and (min-width: 541px) {
+  .containerImg4 {
+    width: 300px;
+    height: 400px;
+    margin-right: 30px;
+    }
+}
+
+@media screen and (min-width: 960px) {
+  .containerImg4 {
+    width: 250px;
+    height: 350px;
+    margin-right: 60px;
+    }
+}
+
+.containerImg5 {
+  margin: auto;
+  width: 100%;
+  height: 500px;
+  margin-top: 30px;
+  background-image: url("img/items/item5.jpeg");
+  background-size: cover;
+}
+
+@media screen and (min-width: 541px) {
+  .containerImg5 {
+    width: 300px;
+    height: 400px;
+    margin-right: 30px;
+    }
+}
+
+@media screen and (min-width: 960px) {
+  .containerImg5 {
+    width: 250px;
+    height: 350px;
+    margin-right: 60px;
+    }
+}
+
+.containerImg6 {
+  margin: auto;
+  width: 100%;
+  height: 250px;
+  margin-top: 30px;
+  background-image: url("img/senzai.jpeg");
+  background-size: cover;
+}
+
+@media screen and (min-width: 541px) {
+  .containerImg6 {
+    width: 80%;
+    height: 50vh;
+    }
+}
+
+@media screen and (min-width: 960px) {
+  .containerImg6 {
+    width: 80%;
+    height: 70vh;
+    }
+}
+
+.containerTitleC {
+  text-align: center;
+  margin-top: 70px;
+}
+
+.containerTextC {
+  text-align: center;
+  margin-top: 20px;
+}

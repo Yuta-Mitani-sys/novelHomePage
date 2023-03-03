@@ -1,0 +1,643 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: serif;
+}
+
+
+/*aタグの効果を打ち消す */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/*・を非表示 */
+ul,
+li {
+  list-style: none;
+}
+
+.header {
+  background-color: #fff;
+  height: 50px;
+  width: 100%;
+  position: fixed; /* スクロールしてもヘッダーを固定させる */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999; /* 要素の重なり順を指定する */
+}
+
+main {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  background-image: url("img/bgimage.jpeg");
+  background-size: cover;
+  background-attachment: fixed; /* スクロール時に固定 */
+  background-position: center;
+  background-color:rgba(255,255,255,0.9); /* 背景を半透明化 */
+  background-blend-mode:lighten;
+}
+
+.headerContainer {
+  padding: 0 20px; /*左右の余白確保*/
+  display: flex; /*ロゴとハンバーガーメニューを横に並べる*/
+  align-items: center;
+  justify-content: space-between;
+  height: inherit; /*親要素の高さを継承*/
+  position: relative;
+}
+
+.headerTitle {
+  font-size: 20px;
+  font-family: Georgia;
+  color: #003366;
+}
+
+@media screen and (min-width: 960px) {
+  .headerTitle {
+    width: 120px;
+  }
+}
+
+.headerNav { 
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  transform: translateX(100%); 
+  background-color: #fff; /*ハンバーガーメニュークリック時のナビゲーションメニュー背景色*/
+  transition: ease .4s; /*ハンバーガーメニュークリック時のナビゲーションメニュー出現を遅延*/
+}
+
+@media screen and (min-width: 541px) {
+  .headerNav {
+    position: static;
+    transform: initial;
+    background-color: inherit;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    width: 50%;
+  }
+}
+
+/*PC時のナビゲーションメニュー、横並びにする*/
+@media screen and (min-width: 541px) {
+  .navItems {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: initial;
+    justify-content: space-between;
+  }
+}
+
+.headerHamburger {  
+  width: 48px;
+  height: 100%;
+  background-color: transparent; /*buttonタグデフォルトスタイルを打ち消し*/
+  border-color: transparent; /*buttonタグデフォルトスタイルを打ち消し*/
+  z-index: 9999;
+}
+
+@media screen and (min-width: 541px) {
+  /*PC時非表示にする*/
+  .headerHamburger {
+    display: none;
+  }
+}
+
+.headerHamburger span {
+  width: 80%;
+  height: 1px;
+  background-color: #000;
+  position: relative;
+  transition: ease .4s; /*ハンバーガーメニュークリック時の三本線の動きを遅延*/
+  display: block;
+}
+
+.headerHamburger span:nth-child(1) {
+  top: 0;
+}
+
+.headerHamburger span:nth-child(2) {
+  margin: 8px 0;
+}
+
+.headerHamburger span:nth-child(3) {
+  top: 0;
+}
+
+ /* ハンバーガーメニュークリック後のスタイル */
+.headerNav.active {
+  transform: translateX(160px); /* 要素を動かすプロパティ */
+}
+
+.headerHamburger.active span:nth-child(1) {
+  top: 5px;
+  transform: rotate(45deg);
+}
+
+.headerHamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.headerHamburger.active span:nth-child(3) {
+  top: -13px;
+  transform: rotate(-45deg);
+}
+
+.navItems {
+  padding-top: 230px;
+  padding-bottom: 200px;
+}
+
+@media screen and (min-width: 541px) {
+  .navItems {
+     padding-top: inherit;
+     padding-bottom: inherit;
+    }
+  }
+
+.navItems-item a {
+  color: #000;
+  width: 100%;
+  display: block;
+  text-align: left;
+  font-size: 15px;
+  font-family: serif;
+}
+
+/* 540px以下に適用されるCSS（タブレット用） */
+@media screen and (max-width: 540px) {
+.navItems-item a {
+    padding-left: 60px;
+  }
+}
+
+/* 540px以下に適用されるCSS（タブレット用） */
+@media screen and (max-width: 540px) {
+	li .navItems-subText {
+    font-size: 10px;
+    color: #3399FF;
+    padding-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 541px) {
+  .navItems-item a {
+    margin-bottom: 0;
+    font-size: 14px;
+    padding-left: 35px;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 541px) {
+  li .navItems-subText{
+    font-size: 10px;
+    color: #3399FF;
+  }
+}
+
+.navItems-item:last-child a {
+  margin-bottom: 0;
+}
+
+
+
+
+/* ここからメインコンテンツ */
+
+.topContents {
+  padding-top: 50px;
+  background-color: transparent;
+}
+
+@media screen and (min-width: 541px) {
+  .topContents {
+    padding: 50px 10px 10px 10px;
+    }
+}
+
+@media screen and (min-width: 960px) {
+  .topContents {
+    padding: 50px;
+    }
+}
+
+@media screen and (min-width: 541px) {
+  .mainContents {
+     display: flex;
+     justify-content: space-between;
+    }
+}
+
+/* リクルート */
+@media screen and (min-width: 541px) {
+  .mainContents2 {
+     display: flex;
+     justify-content: space-between;
+     margin-top: 200px;
+    }
+}
+
+.textContents {
+  display: flex;
+  margin: 50px;
+}
+
+.textContent1 {
+  font-size: 35px;
+}
+
+.textContent2 {
+  font-size: 12px;
+  margin-top: 25px;
+  margin-left: 30px;
+}
+
+.imgContents {
+  height: 300px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 541px) {
+  .imgContents {
+    height: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    order: 1;
+    }
+}
+
+.imgContent {
+  width: 40%;
+  height: 230px;
+  margin: 20px;
+  background-image: url("img/topImg3.jpeg");
+  background-size: cover;
+}
+
+@media screen and (min-width: 541px) {
+  .imgContent {
+    width: 40%;
+    height: 230px;
+    margin-left: 30px;
+    }
+}
+
+.imgContent2 {
+  width: 40%;
+  height: 230px;
+  margin-top: 60px;
+  margin-right: 20px;
+  background-image: url("img/topImg2.jpeg");
+  background-size: cover;
+}
+
+@media screen and (min-width: 541px) {
+  .imgContent2 {
+    width: 40%;
+    height: 230px;
+    margin-top: 60px;
+    }
+}
+
+@media screen and (min-width: 541px) {
+  .subTextContents {
+    width: 50%;
+    }
+}
+
+.subTextContent {
+  font-size: 20px;
+  margin-bottom: 15px;
+  padding: 15px;
+}
+
+
+/* ここからサービス */
+
+.subTextContent2 {
+  margin-bottom: 120px;
+  padding: 15px;
+}
+
+.servicesContents {
+  background-color: transparent;
+}
+
+.imgContents2 {
+  padding: 10px;
+}
+
+@media screen and (min-width: 541px) {
+  .imgContents2 {
+    width: 80%;
+    height: 100%;
+    }
+}
+
+.imgContent3 {
+  width: 100%;
+  height: 40vh;
+  margin-bottom: 15px;
+  background-image: url("img/bgimage.jpeg");
+  background-size: cover;
+}
+
+@media screen and (min-width: 541px) {
+  .imgContent3 {
+    width: 100%;
+    }
+}
+
+/* サービスボタン */
+.recruitButton {
+  text-align: right;
+  margin-top: 20px;
+}
+/* サービスボタン */
+button {
+  height: 50px;
+  width: 130px;
+  color: #fff;
+  background-color: #000;
+}
+
+
+.slide-items {
+  width: 100%;
+  height: 100%;
+}
+
+.slide-items img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.slide-items {
+  width: 80%;
+  display: flex;
+  max-width: 80%;
+  margin: auto;
+}
+
+.slide-items li {
+  height: auto;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.slide-items img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.slick-prev.slick-arrow:before,
+.slick-next.slick-arrow:before {
+  color: black;
+}
+.slick-dots {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.slick-dots li button:before {
+  font-size: 18px;
+  top: 6px;
+}
+
+
+.slide-item-text {
+  font-family: serif;
+}
+
+.textContents2 {
+  display: flex;
+  margin: 200px 50px 50px 50px;
+}
+
+/* リクルート */
+@media screen and (min-width: 541px) {
+  .textContainer {
+    width: 50%;
+    }
+}
+
+/* リクルート */
+@media screen and (min-width: 541px) {
+  .textContents2 {
+    margin: 0 10px 50px 10px;
+    display: block;
+    }
+}
+
+/* リクルート */
+@media screen and (min-width: 960px) {
+  .textContents2 {
+    display: flex;
+    }
+}
+
+.imgContent4 {
+  width: 100%;
+  height: 40vh;
+  margin-bottom: 15px;
+  background-image: url("img/zimusho.jpg");
+  background-size: cover;
+}
+
+@media screen and (min-width: 541px) {
+  .imgContent3 {
+    width: 100%;
+    }
+}
+
+.subTextcontent3 {
+  margin-bottom: 30px;
+  padding: 15px;
+}
+
+/* リクルート */
+@media screen and (min-width: 541px) {
+  .subTextcontents2 {
+    width: 100%;
+    }
+}
+
+/* リクルート */
+@media screen and (min-width: 541px) {
+  .subTextcontent3 {
+    padding: 0 10px 0 10px;
+    }
+}
+
+/* リクルート */
+.recruitButton {
+  text-align: right;
+}
+/* リクルート */
+button {
+  height: 50px;
+  width: 130px;
+  color: #fff;
+  background-color: #000;
+}
+
+/* ここからコンタクト */
+.contactContents {
+  margin-top: 140px;
+}
+
+.contactBackImg {
+  width: 100%;
+  height: 100%;
+  background-image: url("img/contactImg.jpeg");
+  background-size: cover;
+  color: #fff;
+}
+
+.contactText {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.contactText2 {
+  display: flex;
+  justify-content: center;
+}
+
+span{
+  display: block;
+}
+
+.contactNum {
+  margin-top: 30px;
+  padding: 30px;
+  font-size: 30px;
+  border: 2px solid #fff;
+}
+
+.contactSns {
+  margin-top: 30px;
+  padding: 30px;
+  text-align: center;
+}
+
+.snsText {
+  padding-bottom: 10px;
+}
+
+.gg-instagram {
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  transform: scale(var(--ggs,1));
+  border: 2px solid transparent;
+  box-shadow: 0 0 0 2px;
+  border-radius: 4px;
+  width: 20px;
+  height: 20px
+ }
+ 
+ .gg-instagram::after,
+ .gg-instagram::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute
+ }
+ 
+ .gg-instagram::after {
+  border: 2px solid;
+  left: 3px;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  top: 3px
+ }
+ 
+ .gg-instagram::before {
+  border-radius: 3px;
+  width: 2px;
+  height: 2px;
+  background: currentColor;
+  right: 1px;
+  top: 1px
+ } 
+
+
+
+/* ここからフッター */
+
+.footer {
+  background-color: transparent;
+  height: 50%;
+  display: flex;
+}
+
+.footer div {
+  margin: auto;
+}
+
+.footerNavItems {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.footerNavItem {
+  width: 50%;
+  flex-flow: column;
+  margin-bottom: 10px;
+}
+
+.footerNavItemContact {
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.footerNavItemText {
+  font-size: 10px;
+  color: #3399FF;
+}
+
+.footerInfo {
+  text-align: center;
+  padding-top: 30px;
+}
+
+.footerInfo div {
+  padding-bottom: 10px;
+}
+
+.footerTop {
+  font-size: 20px;
+}
+
+.footerAddressNum {
+  font-size: 20px;
+}
+
+.footerAddress {
+  font-size: 25px;
+}
+
+.footerLogo {
+  font-size: 13px;
+  padding-top: 20px;
+}
+
+

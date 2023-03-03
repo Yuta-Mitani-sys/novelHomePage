@@ -1,0 +1,45 @@
+
+@media screen and (min-width: 960px) {
+  .recruitMain {
+    padding: 50px;
+    }
+}
+
+.recruitContents {
+  padding-top: 100px;
+  margin: 50px;
+}
+
+.recruitTitle {
+  font-size: 40px;
+}
+
+.recruitTextContents {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.recruitmentTop {
+  text-align: center;
+  padding-top: 100px;
+}
+
+.recruitmentTitle {
+  font-size: 30px;
+}
+
+table {
+  width: 90%;
+  margin: 20px;
+  border-top: 1px solid #BBBBBB;
+}
+
+th {
+  padding-top: 10px;
+}
+
+tr {
+  padding-top: 15px;
+  display: block;
+  margin-left: 15px;
+}
